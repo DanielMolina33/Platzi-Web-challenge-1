@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background: hsl(257, 40%, 49%) url('./images/bg-mobile.svg') no-repeat;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.button {
+  font-family: 'Poppins', sans-serif;
+  background: rgb(255, 255, 255);
+  color: hsl(257, 40%, 49%);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1);
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  width: 180px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, .85);
+}
+
+.container {
+  width: 100%;
+  padding: 2.8rem;
+}
+
+.header,
+.hero {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.header__image {
+  width: 125px;
+  cursor: pointer;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.main {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+.content__container {
+  width: 100%;
+  text-align: center;
+}
+
+.content__container--title,
+.content__container--description {
+  margin-bottom: 1.2rem;
+}
+
+.content__container--description {
+  line-height: 22px;
+  font-size: .95rem;
+}
+
+.footer,
+.social-network {
+  width: 100%;
+  text-align: center;
+}
+
+.social-network__icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.social-network__icon img {
+  display: block;
+  width: 80%;
+  height: 80%;
+}
+
+.social-network__icon:hover {
+  background: rgba(0, 0, 0, .75);
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url('./images/bg-desktop.svg');
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 2.8rem 4.5rem 1.2rem;
+  }
+
+  .header__image {
+    width: 160px;
+  }
+
+  .hero {
+    margin-bottom: 0;
+  }
+
+  .main {
+    margin-bottom: 0;
+    grid-template-columns: 650px 1fr;
+    grid-template-rows: auto;
+    column-gap: 3rem;
+  }
+
+  .content__container {
+    width: 85%;
+    text-align: left;
+  }
+
+  .social-network {
+    text-align: right;
+  }
+}
